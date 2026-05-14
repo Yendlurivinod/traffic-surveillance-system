@@ -1,0 +1,14 @@
+{
+  "total_detections": 10,
+  "total_alerts": 3,
+  "overspeed_rate": 0.3,
+  "object_counts": {
+    "car": 5,
+    "truck": 2,
+    "pedestrian": 2,
+    "motorcycle": 1
+  },
+  "avg_speed_kmh": 54.7,
+  "max_speed_kmh": 110.0,
+  "processed_at": "2026-05-14T18:13:13.504984"
+}

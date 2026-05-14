@@ -1,0 +1,4 @@
+frame_id,timestamp,object_id,object_type,speed_kmh,speed_limit,speed_excess,risk_level
+3,2024-01-15 08:00:03,1,car,85,80,5,HIGH
+5,2024-01-15 08:00:05,4,car,95,80,15,HIGH
+5,2024-01-15 08:00:05,5,motorcycle,110,80,30,CRITICAL

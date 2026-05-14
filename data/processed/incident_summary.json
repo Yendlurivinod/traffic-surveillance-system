@@ -1,0 +1,11 @@
+{
+  "total_incidents": 3,
+  "by_type": {
+    "OVERSPEED": 3
+  },
+  "by_severity": {
+    "HIGH": 2,
+    "CRITICAL": 1
+  },
+  "generated_at": "2026-05-14T18:13:17.239851"
+}

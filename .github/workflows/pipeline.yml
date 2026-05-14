@@ -1,0 +1,43 @@
+name: Traffic Surveillance Pipeline
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # Run every 6 hours
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run detection pipeline
+        run: python pipeline/detection.py
+
+      - name: Run tracking pipeline
+        run: python pipeline/tracking.py
+
+      - name: Run incident detection
+        run: python pipeline/incident_detection.py
+
+      - name: Upload pipeline outputs
+        uses: actions/upload-artifact@v3
+        with:
+          name: pipeline-outputs
+          path: data/processed/
+
+      - name: Upload incident report
+        uses: actions/upload-artifact@v3
+        with:
+          name: incident-report
+          path: data/processed/incident_summary.json

@@ -1,0 +1,4 @@
+incident_type,severity,frame_id,timestamp,object_id,object_type,speed_kmh,speed_limit,speed_excess_kmh,description
+OVERSPEED,HIGH,3,2024-01-15 08:00:03,1,car,85,80,5,Car #1 travelling at 85km/h (5km/h over limit)
+OVERSPEED,HIGH,5,2024-01-15 08:00:05,4,car,95,80,15,Car #4 travelling at 95km/h (15km/h over limit)
+OVERSPEED,CRITICAL,5,2024-01-15 08:00:05,5,motorcycle,110,80,30,Motorcycle #5 travelling at 110km/h (30km/h over limit)
